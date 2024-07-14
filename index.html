@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de férias</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+    <body onload="setDataForm()">
+        <header class="flex justify-center pt-4">
+            <h1>Contador de férias</h1>
+        </header>
+        <div id="container" class="container mx-auto flex justify-center flex flex-col gap-y-4 pt-5">
+            <div id="formData" class="flex justify-center">
+                <form name="formData">
+                    <div>
+                        <input type="date" name="date" class="border border-none shadow-md py-2 px-4 rounded">
+                        <button type="button" onClick="showContainer()") class="border border-none shadow-md py-2 px-4 bg-teal-600 text-white rounded">Mostrar</button>
+                    </div>    
+                </form>
+            </div>
+            <div id="group" class="flex flex-row gap-3 justify-center">
+                <div id="showValue" class="border p-4">
+                    <span>0</span>    
+                </div>
+                <form name="typeData" class="border">
+                    <select name="typeShowData" id="typeShowData" onchange="showData()" class="p-4">
+                        <option value="1" selected>Semanas</option>
+                        <option value="2">Dias</option>
+                        <option value="3">Horas</option>
+                        <option value="4">Minutos</option>
+                        <option value="5">Segundos</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
